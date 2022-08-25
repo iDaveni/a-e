@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -16,18 +20,17 @@ header {
   width: 100%;
   height: 70px;
 }
+.header_contact {
+  margin-right: 200px;
+}
 .header_logo {
   font-family: "STIX Two Text";
   font-style: normal;
   font-weight: 500;
   font-size: 26px;
-  margin-right: 20px;
   line-height: 22px;
   color: #ffffff;
   margin-right: 260px;
-}
-.header_contact {
-  margin-right: 200px;
 }
 
 .header_tel {
@@ -93,6 +96,7 @@ h1 {
   text-align: center;
   color: #ffffff;
 }
+
 .block_service {
   font-family: "Montserrat";
   font-style: normal;
@@ -117,10 +121,12 @@ h1 {
   align-items: center;
   color: #8a8a8a;
 }
+
 .block_inform {
   max-width: 600px;
   width: 100%;
 }
+
 .block_wrap {
   max-width: 1520px;
   width: 100%;
@@ -128,6 +134,7 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+
 h2 {
   font-family: "STIX Two Text";
   font-style: normal;
@@ -146,6 +153,7 @@ h2 {
   align-items: center;
   color: #8a8a8a;
 }
+
 .img_main {
   width: 514px;
   height: 513px;
@@ -173,6 +181,7 @@ section {
   height: 396px;
   margin-right: 50px;
 }
+
 .favorite_calc {
   font-family: "STIX Two Text";
   font-style: normal;
@@ -200,6 +209,7 @@ section {
 .favorites_info {
   display: flex;
 }
+
 .favorites {
   margin-right: 10px;
 }
@@ -219,12 +229,14 @@ section {
 .block_site {
   display: flex;
 }
+
 .site {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 25px;
 }
+
 .site:last-child {
   margin-right: 0;
 }
@@ -278,6 +290,7 @@ footer {
   width: 100%;
   height: 70px;
 }
+
 .footer_copyright {
   margin-right: 100px;
   font-family: "Montserrat";
@@ -286,12 +299,7 @@ footer {
   font-size: 16px;
   color: #ffffff;
 }
-.footer_contact {
-  margin-right: 200px;
-}
-.footer_copyright span {
-  color: #da4533;
-}
+
 .footer_tel {
   font-family: "Montserrat";
   font-style: normal;
@@ -311,26 +319,6 @@ footer {
   border: none;
   background: transparent;
   color: #da4533;
-}
-.foot_text {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  margin-right: 15px;
-  font-size: 16px;
-  line-height: 160%;
-  color: #ffffff;
-}
-.foot_btn {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  cursor: pointer;
-  line-height: 160%;
-  border: none;
-  background: transparent;
-  color: #ffffff;
 }
 
 .modal {
@@ -462,4 +450,169 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.modale {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+  opacity: 0;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modale:target {
+  opacity: 1;
+  pointer-events: auto;
+  overflow-y: auto;
+}
+
+.modale-dialog {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  margin: 10px;
+}
+
+.modale-content {
+  position: relative;
+  background: #1b1b1b;
+  width: 100%;
+  max-width: 450px;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+
+.modale-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #eceeef;
+}
+
+.modale-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  border: none;
+  color: #ffffff;
+  font-weight: 500;
+}
+.modale_text {
+  font-family: "Montserrat";
+  font-style: normal;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  max-width: 300px;
+  line-height: 160%;
+  color: #ffffff;
+  font-weight: 500;
+}
+.modale_about {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.modale_about span {
+  font-family: "STIX Two Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 135%;
+  color: #ffffff;
+}
+
+.modale_about p {
+  font-family: "Montserrat";
+  font-style: normal;
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  color: #8a8a8a;
+}
+
+@media (max-width: 767px) {
+  .block_txt {
+    text-align: center;
+  }
+  .favorites_info {
+    padding: 0 10px;
+  }
+  .footer_copyright span {
+    color: #da4533;
+    margin-left: 5px;
+  }
+  .block_consult {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+  }
+  header {
+    flex-direction: column;
+    padding-top: 10px;
+  }
+  .header_logo {
+    margin-right: 0;
+  }
+  .header_contact {
+    margin-right: 0;
+  }
+  .block_inform {
+    text-align: center;
+  }
+  .block_wrap {
+    flex-direction: column;
+  }
+  .service_text {
+    text-align: center;
+  }
+  .img_main {
+    width: 390px;
+  }
+  .services {
+    flex-direction: column;
+  }
+  .img_services {
+    width: 390px;
+    margin-right: 0;
+  }
+  h2 {
+    text-align: center;
+  }
+  .block_site {
+    flex-direction: column;
+  }
+  .site {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+  .site:last-child {
+    margin-bottom: 0;
+  }
+  footer {
+    flex-direction: column;
+  }
+  .footer_copyright {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
 }
